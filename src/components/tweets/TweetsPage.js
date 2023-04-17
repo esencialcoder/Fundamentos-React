@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import "./styles.css";
 const tweets = [
   {
@@ -21,8 +22,15 @@ const styles = {
 };
 
 const TweetsPage = () => {
-  const theme = "light";
-  const className = "tweetsPage " + (theme === "light" ? "light" : "dark" );
+  const theme = "dark";
+  // const className = "tweetsPage " + (theme === "light" ? "light" : "dark" );
+
+  // Aplico la librería classnames
+
+  const className = classNames('tweetsPage', {
+    light: theme === 'light',
+    dark: theme === 'dark',
+  })
   return (
     <div
       className={className}
