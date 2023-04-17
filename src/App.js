@@ -1,12 +1,12 @@
-import TweetsPage from './components/tweets/TweetsPage';
+import TweetsPage from "./components/tweets/TweetsPage";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-  <div className="App">
-    <TweetsPage/>
-  </div>
+    <div className="App">
+      <TweetsPage />
+    </div>
   );
 }
 
