@@ -1,5 +1,8 @@
 import classNames from "classnames";
-import "./styles.css";
+// import "./styles.css";
+import styles from './styles.module.css'
+
+console.log(styles);
 const tweets = [
   {
     content:
@@ -17,12 +20,12 @@ const tweets = [
   },
 ];
 
-const styles = {
+const stylesInLine = {
   backgroundColor: "lightblue",
 };
 
 const TweetsPage = () => {
-  const theme = "dark";
+  const theme = "light";
   // const className = "tweetsPage " + (theme === "light" ? "light" : "dark" );
 
   // Aplico la librería classnames
@@ -33,7 +36,8 @@ const TweetsPage = () => {
   })
   return (
     <div
-      className={className}
+      //className={className}
+      className={styles.tweetsPage}
       // style={{
       //   backgroundColor: theme === "light" ? "lightblue" : "darkblue",
       // }}
