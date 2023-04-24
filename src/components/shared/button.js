@@ -20,6 +20,15 @@ const Button = styled.button`
   outline-style: none;
   opacity: ${props => props.disabled ? 0.5 : 1};
   padding: 0 30px;
+  pointer-events: ${props => props.disabled ? 'none' : 'auto'};
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: ${props => props.variant === 'primary' 
+    ? 'rgb(26, 145, 218)' 
+    : 'rgba(29, 161, 242, 0.1)'}
+  }
 `;
 
 export default Button;
